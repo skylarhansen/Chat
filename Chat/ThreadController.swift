@@ -10,7 +10,9 @@ import Foundation
 
 class ThreadController {
     
-    func createThread(names: String, messages: [Message], completion: (() -> Void)?) {
+    static let sharedController = ThreadController()
+    
+    func createThread(names: String, completion: (() -> Void)?) {
         
     }
     
@@ -18,7 +20,9 @@ class ThreadController {
         
     }
     
-    func addMessageToThread(message: Message, thread: Thread, completion: ((success: Bool) -> Void)?) {
+    func addMessageToThread(text: String, thread: Thread, user: User, completion: ((success: Bool) -> Void)?) {
+        
+        let message = Message(text: text, thread: thread, user: user)
         
     }
     
