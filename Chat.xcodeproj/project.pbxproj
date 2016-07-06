@@ -11,6 +11,8 @@
 		8C3300A71D1DD00C00DDA158 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3300A51D1DD00C00DDA158 /* Main.storyboard */; };
 		8C3300AC1D1DD00C00DDA158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3300AB1D1DD00C00DDA158 /* Assets.xcassets */; };
 		8C3300AF1D1DD00C00DDA158 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3300AD1D1DD00C00DDA158 /* LaunchScreen.storyboard */; };
+		8C5247431D28409E0034A8E8 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5247421D28409E0034A8E8 /* Thread.swift */; };
+		8C5247451D2841140034A8E8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5247441D2841140034A8E8 /* Message.swift */; };
 		8C5E92D51D282391001F759B /* UserRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E92D41D282391001F759B /* UserRecord.swift */; };
 		8C5E92D71D282455001F759B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E92D61D282455001F759B /* UserInfo.swift */; };
 		8C7ADF071D2590A600609EDA /* ThreadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ADF061D2590A600609EDA /* ThreadTableViewController.swift */; };
@@ -19,7 +21,7 @@
 		8C7ADF0F1D25AD8800609EDA /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ADF0E1D25AD8800609EDA /* CloudKitManager.swift */; };
 		8C7ADF281D25C4F000609EDA /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ADF271D25C4F000609EDA /* MessageTableViewCell.swift */; };
 		8C7ADF2B1D25CB8D00609EDA /* ThreadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ADF2A1D25CB8D00609EDA /* ThreadController.swift */; };
-		8C7ADF321D26249900609EDA /* CloudKitManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ADF311D26249900609EDA /* CloudKitManagedObject.swift */; };
+		8C7ADF321D26249900609EDA /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ADF311D26249900609EDA /* CloudKitSyncable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		8C3300AB1D1DD00C00DDA158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C3300AE1D1DD00C00DDA158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C3300B01D1DD00C00DDA158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C5247421D28409E0034A8E8 /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		8C5247441D2841140034A8E8 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8C5E92D41D282391001F759B /* UserRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRecord.swift; sourceTree = "<group>"; };
 		8C5E92D61D282455001F759B /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		8C7ADF061D2590A600609EDA /* ThreadTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadTableViewController.swift; sourceTree = "<group>"; };
@@ -37,7 +41,7 @@
 		8C7ADF0E1D25AD8800609EDA /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		8C7ADF271D25C4F000609EDA /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		8C7ADF2A1D25CB8D00609EDA /* ThreadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadController.swift; sourceTree = "<group>"; };
-		8C7ADF311D26249900609EDA /* CloudKitManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManagedObject.swift; sourceTree = "<group>"; };
+		8C7ADF311D26249900609EDA /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 			children = (
 				8C5E92D41D282391001F759B /* UserRecord.swift */,
 				8C5E92D61D282455001F759B /* UserInfo.swift */,
+				8C5247421D28409E0034A8E8 /* Thread.swift */,
+				8C5247441D2841140034A8E8 /* Message.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -115,7 +121,7 @@
 		8C7ADF331D26252800609EDA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				8C7ADF311D26249900609EDA /* CloudKitManagedObject.swift */,
+				8C7ADF311D26249900609EDA /* CloudKitSyncable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -193,12 +199,14 @@
 			files = (
 				8C3300A21D1DD00C00DDA158 /* AppDelegate.swift in Sources */,
 				8C7ADF2B1D25CB8D00609EDA /* ThreadController.swift in Sources */,
+				8C5247431D28409E0034A8E8 /* Thread.swift in Sources */,
 				8C7ADF0F1D25AD8800609EDA /* CloudKitManager.swift in Sources */,
 				8C7ADF071D2590A600609EDA /* ThreadTableViewController.swift in Sources */,
 				8C7ADF281D25C4F000609EDA /* MessageTableViewCell.swift in Sources */,
-				8C7ADF321D26249900609EDA /* CloudKitManagedObject.swift in Sources */,
+				8C7ADF321D26249900609EDA /* CloudKitSyncable.swift in Sources */,
 				8C7ADF091D25955E00609EDA /* SearchTableViewController.swift in Sources */,
 				8C7ADF0B1D25963A00609EDA /* MessageViewController.swift in Sources */,
+				8C5247451D2841140034A8E8 /* Message.swift in Sources */,
 				8C5E92D71D282455001F759B /* UserInfo.swift in Sources */,
 				8C5E92D51D282391001F759B /* UserRecord.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  CloudKitManagedObject.swift
+//  CloudKitSyncable.swift
 //  Chat
 //
 //  Created by Skylar Hansen on 6/30/16.
@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import CoreData
 import CloudKit
 
-@objc protocol CloudKitManagedObject {
+@objc protocol CloudKitSyncable {
     
     var timestamp: NSDate { get set }
     var recordIDData: NSData? { get set }
@@ -19,10 +18,10 @@ import CloudKit
     
     var cloudKitRecord: CKRecord? { get }
     
-    init?(record: CKRecord, context: NSManagedObjectContext)
+    init?(record: CKRecord)
 }
 
-extension CloudKitManagedObject {
+extension CloudKitSyncable {
     
     var cloudKitRecordID: CKRecordID? {
         
@@ -42,15 +41,9 @@ extension CloudKitManagedObject {
     func update(record: CKRecord) {
         
         self.recordIDData = NSKeyedArchiver.archivedDataWithRootObject(record.recordID)
-        
-        do {
-            try Stack.sharedStack.managedObjectContext.save()
-        } catch {
-            print("Unable to save Managed Object Context: \(error)")
-        }
     }
     
-    func nameForManagedObject() -> String {
+    func nameForSyncableObject() -> String {
         
         return NSUUID().UUIDString
     }

@@ -12,5 +12,12 @@ class UserInfo {
     
     let firstName: String
     let lastName: String
+    let threads: [Thread]
     
+    init(firstName: String, lastName: String, threads: [Thread]) {
+        
+        self.firstName = firstName
+        self.lastName = lastName
+        self.threads = threads
+    }
 }

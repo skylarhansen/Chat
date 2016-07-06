@@ -40,7 +40,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="NBH-A7-kfr" kind="show" id="IM4-hx-oP8"/>
+                                    <segue destination="NBH-A7-kfr" kind="show" identifier="toMessageDetail" id="IM4-hx-oP8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -140,7 +140,7 @@
                                         <rect key="frame" x="0.0" y="92" width="335" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I3g-s7-2lH" id="ebZ-Io-uCB">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8d-4l-g3J">

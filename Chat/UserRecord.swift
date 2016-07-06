@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import CloudKit
 
 class UserRecord {
+    
     
     
 }
